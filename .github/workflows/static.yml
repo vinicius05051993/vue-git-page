@@ -9,6 +9,12 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  workflow_run:
+    workflows:
+      - Deploy Vue.js App to GitHub Pages
+    types:
+      - completed
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
