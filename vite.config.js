@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  base: 'vinicius05051993/vue-catalog',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
