@@ -6,11 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -40,6 +35,8 @@ jobs:
 
   deploy:
     needs: build-and-deploy
+    permissions:
+      contents: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
