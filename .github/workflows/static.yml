@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Generate Static Content
 
 on:
 
@@ -8,7 +8,7 @@ on:
 
   workflow_run:
     workflows:
-      - Deploy Vue.js App to GitHub Pages
+      - Build Vue.js
     types:
       - completed
 
