@@ -36,6 +36,7 @@ jobs:
   deploy:
     needs: build-and-deploy
     permissions:
+      contents: read
       id-token: write
       pages: write
     environment:
