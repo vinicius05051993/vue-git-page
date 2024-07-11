@@ -83,8 +83,9 @@ jobs:
 
       - name: Install Google Chrome
         run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
+          wget https://dl.google.com/linux/deb/pool/main/g/google-chrome-stable/google-chrome-stable_91.0.4472.77-1_amd64.deb
+          sudo dpkg -i google-chrome-stable_91.0.4472.77-1_amd64.deb
+          sudo apt-get install -f -y
 
       - name: Install Selenium and Chromedriver
         run: |
