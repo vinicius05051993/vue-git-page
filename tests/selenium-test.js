@@ -1,6 +1,7 @@
-const {Builder, By, until} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-const path = require('path');
+import { Builder, By, until } from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome';
+import path from 'path';
+import fs from 'fs';
 
 (async function example() {
     // Configuração para rodar o Chrome headless
@@ -23,10 +24,10 @@ const path = require('path');
         console.log(title);
 
         // Captura de tela da página inicial
-        let screenshotPath = path.join(__dirname, 'homepage.png');
+        let screenshotPath = path.join(process.cwd(), 'homepage.png');
         await driver.takeScreenshot().then(
-            function(image, err) {
-                require('fs').writeFileSync(screenshotPath, image, 'base64');
+            function(image) {
+                fs.writeFileSync(screenshotPath, image, 'base64');
             }
         );
 
