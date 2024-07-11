@@ -65,7 +65,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  validation:
+  validate:
     runs-on: ubuntu-latest
     needs: deploy
 
