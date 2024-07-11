@@ -16,7 +16,9 @@
   "dependencies": {
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "vue-router": "^4.3.3",
+    "selenium-webdriver": "^4.0.0",
+    "chromedriver": "^91.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

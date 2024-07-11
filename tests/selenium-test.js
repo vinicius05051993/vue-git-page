@@ -16,7 +16,7 @@ const path = require('path');
         .build();
 
     try {
-        await driver.get('http://localhost:8080'); // Ajuste a URL conforme necessário
+        await driver.get('https://vinicius05051993.github.io/vue-catalog/'); // Ajuste a URL conforme necessário
 
         // Adicione seus testes aqui
         let title = await driver.getTitle();
