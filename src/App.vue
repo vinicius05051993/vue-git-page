@@ -9,7 +9,7 @@ import List from './components/List.vue'
   </header>
 </template>
 
-<style scoped>
+<style>
   #app {
     max-width: unset !important;
   }
