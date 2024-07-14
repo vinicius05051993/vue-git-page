@@ -48,10 +48,6 @@ export default {
         {
           'name': 'other product',
           'image': 'https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg'
-        },
-        {
-          'name': 'one more product',
-          'image': 'https://media.istockphoto.com/id/1672317574/photo/ama-dablam-mountain-peak.webp?b=1&s=170667a&w=0&k=20&c=Ea8yDEHpUemrRuMZUKGPDBE11YTWVksIupMN8FkEBf8='
         }
       ],
     }
@@ -74,13 +70,26 @@ export default {
 }
 
 .product-item {
-  width: calc(33.33% - 100px); /* 33.33% width minus margin */
-  padding: 10px;
-  margin: 0 50px; /* Adjust margin as needed */
+  flex: 1 1 calc(25% - 10px); /* 25% para 4 itens por linha menos a margem */
+  box-sizing: border-box;
+  margin: 5px;
 }
 
-/* Optional: To adjust the spacing between items */
-.product-item:nth-child(3n+1) {
-  clear: both;
+@media (max-width: 1200px) {
+  .product-item {
+    flex: 1 1 calc(33.33% - 10px); /* 33.33% para 3 itens por linha */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-item {
+    flex: 1 1 calc(50% - 10px); /* 50% para 2 itens por linha */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-item {
+    flex: 1 1 calc(100% - 10px); /* 100% para 1 item por linha */
+  }
 }
 </style>
