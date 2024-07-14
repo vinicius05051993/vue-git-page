@@ -26,4 +26,8 @@
     height: 300px;
     width: 200px;
   }
+
+  .item-details {
+    font-size: 16px;
+  }
 </style>
